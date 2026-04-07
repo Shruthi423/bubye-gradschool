@@ -720,7 +720,10 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
   .pill { font-size:.6rem; padding:.2rem .6rem; }
   .maps-link { word-break:break-all; }
   .item[data-av="sold"] .img-box::after { font-size:clamp(1.5rem,8vw,3rem); }
-  .item[data-av="reserved"] .img-box::after { font-size:clamp(1.2rem,6vw,2.5rem); }
+  .item[data-av="reserved"] .img-carousel::after,
+  .item[data-av="reserved"] .img-box::after { font-size:clamp(1rem,5vw,2rem) !important; word-break:break-word; padding:0 1rem; }
+  .item[data-av="sold"] .img-carousel::after,
+  .item[data-av="sold"] .img-box::after { font-size:clamp(1.2rem,6vw,2.5rem) !important; }
 }
 
 @media (max-width:480px) {
@@ -1285,7 +1288,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
   <div class="item" data-av="may">
     <div class="item-grid flip">
       <div class="img-col" data-hover="Good Hair">
-        <div class="img-box"><img loading="lazy" src="Images/hairdryer.jpg" alt="Hair Dryer" style="object-position:top center;"/></div>
+        <div class="img-box"><img loading="lazy" src="Images/hairdryer.jpg" alt="Hair Dryer" style="object-position:center center;"/></div>
       </div>
       <div class="txt-col">
         <div class="avail-row"><div class="avail-dot dm"></div>Available in May - Reserve Now</div>
@@ -2160,6 +2163,20 @@ document.querySelectorAll('.maps-link').forEach(function(a) {
 /* Email label on mailto hover */
 var emailLabel = document.getElementById('cursorEmail');
 document.querySelectorAll('.icontact a[href^="mailto:"]').forEach(function(a) {
+  var email = a.getAttribute('href').replace('mailto:', '');
+  var item = a.closest('.item');
+  var itemName = 'your listing';
+  if (item) {
+    var nameEl = item.querySelector('.iname');
+    if (nameEl) {
+      var text = nameEl.childNodes[0].textContent.trim().replace(/ -\s*$/, '');
+      if (text) itemName = text;
+    }
+  }
+  var subject = encodeURIComponent('Interested in ' + itemName + ' — ByeBye GradSchool');
+  var body = encodeURIComponent('Hi! I saw the ' + itemName + ' on your site and I\'m interested. Is it still available?');
+  a.setAttribute('href', 'mailto:' + email + '?subject=' + subject + '&body=' + body);
+
   a.addEventListener('mouseenter', function() {
     emailLabel.classList.add('visible');
     cursor.style.width = '0px';
@@ -2182,7 +2199,17 @@ document.querySelectorAll('.icontact a[href^="mailto:"]').forEach(function(a) {
 var phoneLabel = document.getElementById('cursorPhone');
 document.querySelectorAll('.icontact a[href^="tel:"]').forEach(function(a) {
   var phone = a.getAttribute('href').replace('tel:', '').replace(/[^0-9+]/g, '');
-  a.setAttribute('href', 'https://wa.me/' + phone.replace('+', ''));
+  var item = a.closest('.item');
+  var itemName = 'your listing';
+  if (item) {
+    var nameEl = item.querySelector('.iname');
+    if (nameEl) {
+      var text = nameEl.childNodes[0].textContent.trim().replace(/ -\s*$/, '');
+      if (text) itemName = text;
+    }
+  }
+  var message = encodeURIComponent("Hey! I'm calling dibs on the " + itemName + " 🙋 Is it still up for grabs?");
+  a.setAttribute('href', 'https://wa.me/' + phone.replace('+', '') + '?text=' + message);
   a.setAttribute('target', '_blank');
 
   a.addEventListener('mouseenter', function() {
@@ -2205,7 +2232,8 @@ document.querySelectorAll('.icontact a[href^="tel:"]').forEach(function(a) {
 
 document.querySelectorAll('.cc-d[href^="tel:"]').forEach(function(a) {
   var phone = a.getAttribute('href').replace('tel:', '').replace(/[^0-9+]/g, '');
-  a.setAttribute('href', 'https://wa.me/' + phone.replace('+', ''));
+  var message = encodeURIComponent("Hey! I saw your ByeBye GradSchool site — interested in some items! 👀");
+  a.setAttribute('href', 'https://wa.me/' + phone.replace('+', '') + '?text=' + message);
   a.setAttribute('target', '_blank');
 
   a.addEventListener('mouseenter', function() {
@@ -2227,6 +2255,11 @@ document.querySelectorAll('.cc-d[href^="tel:"]').forEach(function(a) {
 });
 
 document.querySelectorAll('.cc-d[href^="mailto:"]').forEach(function(a) {
+  var email = a.getAttribute('href').replace('mailto:', '');
+  var subject = encodeURIComponent('Hello from ByeBye GradSchool');
+  var body = encodeURIComponent('Hi! I saw your ByeBye GradSchool site and I\'m interested in some items. Are they still available?');
+  a.setAttribute('href', 'mailto:' + email + '?subject=' + subject + '&body=' + body);
+
   a.addEventListener('mouseenter', function() {
     emailLabel.classList.add('visible');
     cursor.style.width = '0px';
