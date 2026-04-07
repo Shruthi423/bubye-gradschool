@@ -370,10 +370,14 @@ nav .burger { animation-delay:.35s; }
 
 /* logo float */
 .logo-float {
-  opacity:0;
+  opacity:0; transform:scale(0.3);
 }
 .logo-float.active {
-  opacity:1;
+  animation:logoScaleIn .8s cubic-bezier(.25,.46,.45,.94) forwards;
+}
+@keyframes logoScaleIn {
+  from { opacity:0; transform:scale(0.3); }
+  to { opacity:1; transform:scale(1); }
 }
 @keyframes logoFloat {
   0%, 100% { transform:translateY(0); }
