@@ -4,6 +4,14 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>ByeBye GradSchool - Amulya & Shruthi's Moving Sale</title>
+<meta name="description" content="ByeBye GradSchool — Amulya & Shruthi's moving out sale in Ann Arbor. Furniture, electronics, kitchen, clothing and more. Everything must go by May 2026."/>
+<meta property="og:title" content="ByeBye GradSchool — Moving Out Sale"/>
+<meta property="og:description" content="Two UMSI grads selling everything before leaving Ann Arbor. Furniture, electronics, clothing and more."/>
+<meta property="og:image" content="logo.svg"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="ByeBye GradSchool — Moving Out Sale"/>
+<meta name="twitter:description" content="Two UMSI grads selling everything before leaving Ann Arbor."/>
 <link rel="icon" type="image/svg+xml" href="Favicon.svg"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -176,7 +184,7 @@ nav .burger { animation-delay:.35s; }
 
 /* ALL ITEMS */
 #all-items { padding:7rem var(--gap) 3rem; position:relative; z-index:2; background:var(--off); }
-.items-top { display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:1.5rem; margin-bottom:5rem; }
+.items-top { display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:var(--gap-sm); margin-bottom:5rem; position:sticky; top:0; z-index:50; background:var(--off); padding-top:1.5rem; padding-bottom:1.5rem; margin-left:calc(-1 * var(--gap)); margin-right:calc(-1 * var(--gap)); padding-left:var(--gap); padding-right:var(--gap); }
 .ftabs-wrap { position:relative; display:inline-flex; }
 .ftab-pill {
   position:absolute; top:0; left:0;
@@ -489,7 +497,7 @@ nav .burger { animation-delay:.35s; }
 .reach-h { font-family:'beastly',sans-serif; font-weight:700; font-size:clamp(4.5rem,14vw,14rem); line-height:.84; margin-bottom:5rem; }
 .cc-eye { font-size:.65rem; font-weight:400; letter-spacing:.14em; text-transform:uppercase; opacity:.3; margin-bottom:1rem; }
 .cc-name { font-family:'beastly',sans-serif; font-weight:700; font-size:2rem; line-height:1; margin-bottom:1rem; }
-.cc-d { font-size:.85rem; opacity:.55; line-height:2.1; text-decoration:none; display:block; transition:opacity .2s; }
+.cc-d { font-size:.85rem; opacity:.55; line-height:2.1; text-decoration:underline; text-underline-offset:3px; display:block; transition:opacity .2s; }
 .cc-d:hover { opacity:1; }
 .pills { display:flex; gap:.4rem; flex-wrap:wrap; margin-top:.9rem; }
 .pill { background:var(--blue); color:var(--off); border-radius:999px; padding:.26rem .82rem; font-size:.68rem; font-weight:700; letter-spacing:.05em; }
@@ -569,7 +577,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
   .hero-btns a { width:100%; text-align:center; }
   .btn-primary, .btn-outline { text-align:center; }
   #all-items { padding:5rem var(--gap) 2rem; }
-  .items-top { flex-direction:column; align-items:flex-start; margin-bottom:3rem; }
+  .items-top { flex-direction:column; align-items:flex-start; margin-bottom:3rem; position:sticky; top:0; z-index:50; background:var(--off); padding-top:1rem; padding-bottom:1rem; margin-left:calc(-1 * var(--gap)); margin-right:calc(-1 * var(--gap)); padding-left:var(--gap); padding-right:var(--gap); }
   .item { margin-bottom:5rem; }
   .item-grid,.item-grid.flip { grid-template-columns:1fr; gap:1.8rem; }
   .item-grid.flip .img-col { order:1; }
@@ -657,8 +665,22 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
   body, html { overflow-x:hidden !important; max-width:100vw; }
   section, .wedo-section, .ticker, footer { overflow-x:hidden; }
 
+  .about-bottom { gap:2rem; }
   .progress-circle { width:48px; height:48px; bottom:1.2rem; right:1.2rem; }
   .progress-text { font-size:.6rem; }
+  .icontact a { text-decoration:underline; text-underline-offset:3px; }
+  .ticker-row span { font-size:.8rem; padding:0 1rem; }
+  .cc-eye { font-size:.6rem; }
+  .pills { gap:.3rem; }
+  .pill { font-size:.6rem; padding:.2rem .6rem; }
+  .maps-link { word-break:break-all; }
+}
+
+@media (max-width:480px) {
+  .pol { width:min(300px, 90vw); }
+  .pol-img { height:240px; }
+  .reach-h { font-size:clamp(2.5rem,10vw,4rem) !important; }
+  #hence { padding:4rem var(--gap) 4rem !important; }
 }
 
 /* PAGE LOADER */
@@ -694,7 +716,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 /* Custom circle cursor */
 * { cursor:none !important; }
 .custom-cursor {
-  position:fixed; top:0; left:0; z-index:10000;
+  position:fixed; left:-100px; top:-100px; z-index:10000;
   width:20px; height:20px; border-radius:50%;
   background:var(--blue); border:none;
   pointer-events:none;
@@ -744,7 +766,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
     <circle class="progress-bg" cx="30" cy="30" r="26"/>
     <circle class="progress-fill" cx="30" cy="30" r="26" id="progressFill"/>
   </svg>
-  <span class="progress-text" id="progressText">0/25</span>
+  <span class="progress-text" id="progressText">0/34</span>
 </div>
 
 <!-- NAV -->
@@ -788,8 +810,8 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
         <div class="pol-name" style="font-size:1.5rem;" data-short="Shruthi" data-full="Shruthi will be moving to|San Francisco">Shruthi</div>
       </div>
       <div class="pol">
-        <div class="pol-img">
-          <img loading="lazy" src="Images/Amulya.jpg" alt="Amulya"/>
+        <div class="pol-img pol-bw">
+          <img loading="lazy" src="Images/Amulya.jpeg" alt="Amulya"/>
         </div>
         <div class="pol-name" style="font-size:1.5rem;" data-short="Amulya" data-full="Amulya will be moving to Seattle">Amulya</div>
       </div>
@@ -849,9 +871,9 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
     <div class="ftabs-wrap">
       <div class="ftab-pill" id="ftabPill"></div>
       <div class="ftabs">
-        <button class="ftab on" onclick="filter('all',this)">All (<span class="ftab-count">25</span>)</button>
-        <button class="ftab"    onclick="filter('now',this)">Available Now (<span class="ftab-count">18</span>)</button>
-        <button class="ftab"    onclick="filter('may',this)">Available in May (<span class="ftab-count">7</span>)</button>
+        <button class="ftab on" onclick="filter('all',this)">All (<span class="ftab-count">34</span>)</button>
+        <button class="ftab"    onclick="filter('now',this)">Available Now (<span class="ftab-count">24</span>)</button>
+        <button class="ftab"    onclick="filter('may',this)">Available in May (<span class="ftab-count">10</span>)</button>
       </div>
     </div>
   </div>
@@ -1060,13 +1082,14 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
             <li><b>Includes -</b> Pillow for support</li>
             <li><b>Color -</b> Black</li>
             <li><b>Material -</b> Leather</li>
-            <li><b>Availability -</b> Available Now</li>
+            <li><b>Availability -</b> Available in May</li>
           </ul>
         </div>
         <div class="sub">
           <div class="iname">Throw Blanket - <span class="iprice-inline">$9</span></div>
           <ul class="imeta">
             <li><b>Color -</b> Forest Green</li>
+            <li><b>Availability -</b> Available Now</li>
           </ul>
         </div>
         <div class="icontact">Contact - <a href="mailto:shruthy@umich.edu">Shruthi</a> · <a href="tel:+17343305974">734-330-5974</a></div>
@@ -1207,8 +1230,8 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
     <div class="item-grid">
       <div class="img-col" data-hover="Sleep like a puppy">
         <div class="img-carousel">
-          <div class="img-box active"><img loading="lazy" src="Images/QB0.jpeg" alt="Queen Bed Set"/></div>
-          <div class="img-box"><img loading="lazy" src="Images/QB1.jpeg" alt="Queen Bed Set"/></div>
+          <div class="img-box active"><img loading="lazy" src="Images/QB1.jpeg" alt="Queen Bed Set"/></div>
+          <div class="img-box"><img loading="lazy" src="Images/QB0.jpeg" alt="Queen Bed Set"/></div>
           <div class="img-box"><img loading="lazy" src="Images/QB2.jpeg" alt="Queen Bed Set"/></div>
           <div class="img-box"><img loading="lazy" src="Images/QB3.jpeg" alt="Queen Bed Set"/></div>
           <div class="img-box"><img loading="lazy" src="Images/QB4.jpeg" alt="Queen Bed Set"/></div>
@@ -1438,7 +1461,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
       <div class="txt-col">
         <div class="avail-row"><div class="avail-dot dm"></div>Available in May - Reserve Now</div>
         <div class="sub">
-          <div class="iname">Study Table - <span class="iprice-inline">$15</span></div>
+          <div class="iname">Study Table - <span class="iprice-inline">$25</span></div>
           <ul class="imeta">
             <li><b>Color -</b> White</li>
             <li><b>Condition -</b> Good as new</li>
@@ -1478,6 +1501,195 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
     </div>
   </div>
 
+  <!-- 27 - Brita Water Filter -->
+  <div class="item" data-av="now">
+    <div class="item-grid flip">
+      <div class="img-col" data-hover="Stay Hydrated">
+        <div class="img-box"><img loading="lazy" src="Images/Brita0.jpeg" alt="Brita Water Filter" style="object-fit:contain; background:rgba(46,78,210,.05);"/></div>
+      </div>
+      <div class="txt-col">
+        <div class="avail-row"><div class="avail-dot dn"></div>Available Now</div>
+        <div class="sub">
+          <div class="iname">Brita Water Filter - <span class="iprice-inline">$5</span></div>
+        </div>
+        <div class="icontact">Contact - <a href="mailto:shruthy@umich.edu">Shruthi</a> or <a href="mailto:amulyavw@umich.edu">Amulya</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 28 - Lounge Chairs -->
+  <div class="item" data-av="now">
+    <div class="item-grid">
+      <div class="img-col" data-hover="Chill Mode">
+        <div class="img-box"><img loading="lazy" src="Images/Chairs_relax.jpeg" alt="Lounge Chairs"/></div>
+      </div>
+      <div class="txt-col">
+        <div class="avail-row"><div class="avail-dot dn"></div>Available Now</div>
+        <div class="sub">
+          <div class="iname">Lounge Chairs - <span class="iprice-inline">$10</span></div>
+          <ul class="imeta">
+            <li><b>Includes -</b> 2 lounge chairs</li>
+          </ul>
+        </div>
+        <div class="icontact">Contact - <a href="mailto:shruthy@umich.edu">Shruthi</a> or <a href="mailto:amulyavw@umich.edu">Amulya</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 29 - Iron Tawa -->
+  <div class="item" data-av="now">
+    <div class="item-grid flip">
+      <div class="img-col" data-hover="Sizzle Time">
+        <div class="img-box"><img loading="lazy" src="Images/Iron_tawa0.jpeg" alt="Iron Tawa"/></div>
+      </div>
+      <div class="txt-col">
+        <div class="avail-row"><div class="avail-dot dn"></div>Available Now</div>
+        <div class="sub">
+          <div class="iname">Iron Tawa - <span class="iprice-inline">$17</span></div>
+          <ul class="imeta">
+            <li><b>Feature -</b> Seasoned with oil, comes with silicone holder</li>
+          </ul>
+        </div>
+        <div class="icontact">Contact - <a href="mailto:shruthy@umich.edu">Shruthi</a> or <a href="mailto:amulyavw@umich.edu">Amulya</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 30 - HP Monitor -->
+  <div class="item" data-av="now">
+    <div class="item-grid">
+      <div class="img-col" data-hover="Screen Time">
+        <div class="img-box"><img loading="lazy" src="Images/Monitor.jpeg" alt="HP Monitor"/></div>
+      </div>
+      <div class="txt-col">
+        <div class="avail-row"><div class="avail-dot dn"></div>Available Now</div>
+        <div class="sub">
+          <div class="iname">HP Monitor - <span class="iprice-inline">$10</span></div>
+          <ul class="imeta">
+            <li><b>Brand -</b> HP</li>
+          </ul>
+        </div>
+        <div class="icontact">Contact - <a href="mailto:shruthy@umich.edu">Shruthi</a> or <a href="mailto:amulyavw@umich.edu">Amulya</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 31 - Oven Trays -->
+  <div class="item" data-av="now">
+    <div class="item-grid flip">
+      <div class="img-col" data-hover="Bake It">
+        <div class="img-carousel">
+          <div class="img-box active"><img loading="lazy" src="Images/Oven_tray0.jpeg" alt="Oven Trays"/></div>
+          <div class="img-box"><img loading="lazy" src="Images/Oven_tray1.jpeg" alt="Oven Trays"/></div>
+          <button class="carousel-btn carousel-prev">&#8249;</button>
+          <button class="carousel-btn carousel-next">&#8250;</button>
+          <div class="img-dots">
+            <span class="img-dot active"></span><span class="img-dot"></span>
+          </div>
+        </div>
+      </div>
+      <div class="txt-col">
+        <div class="avail-row"><div class="avail-dot dn"></div>Available Now</div>
+        <div class="sub">
+          <div class="iname">Oven Trays - <span class="iprice-inline">$5</span></div>
+        </div>
+        <div class="icontact">Contact - <a href="mailto:shruthy@umich.edu">Shruthi</a> or <a href="mailto:amulyavw@umich.edu">Amulya</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 32 - Ceramic Decor Pot -->
+  <div class="item" data-av="now">
+    <div class="item-grid">
+      <div class="img-col" data-hover="Pretty Storage">
+        <div class="img-carousel">
+          <div class="img-box active"><img loading="lazy" src="Images/Pot.jpeg" alt="Ceramic Decor Pot" style="object-fit:contain; background:rgba(46,78,210,.05);"/></div>
+          <div class="img-box"><img loading="lazy" src="Images/pot0.jpeg" alt="Ceramic Decor Pot" style="object-fit:contain; background:rgba(46,78,210,.05);"/></div>
+          <div class="img-box"><img loading="lazy" src="Images/pot1.jpeg" alt="Ceramic Decor Pot" style="object-fit:contain; background:rgba(46,78,210,.05);"/></div>
+          <button class="carousel-btn carousel-prev">&#8249;</button>
+          <button class="carousel-btn carousel-next">&#8250;</button>
+          <div class="img-dots">
+            <span class="img-dot active"></span><span class="img-dot"></span><span class="img-dot"></span>
+          </div>
+        </div>
+      </div>
+      <div class="txt-col">
+        <div class="avail-row"><div class="avail-dot dn"></div>Available Now</div>
+        <div class="sub">
+          <div class="iname">Ceramic Decor Pot - <span class="iprice-inline">$7</span></div>
+        </div>
+        <div class="icontact">Contact - <a href="mailto:shruthy@umich.edu">Shruthi</a> or <a href="mailto:amulyavw@umich.edu">Amulya</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 33 - Queen Bed Set (Amulya's) -->
+  <div class="item" data-av="may">
+    <div class="item-grid flip">
+      <div class="img-col" data-hover="Cloud Nine">
+        <div class="img-carousel">
+          <div class="img-box active"><img loading="lazy" src="Images/Queenbedset_Amulya_0.jpeg" alt="Queen Bed Set"/></div>
+          <div class="img-box"><img loading="lazy" src="Images/Queenbedset_amulya_01.jpeg" alt="Queen Bed Set"/></div>
+          <button class="carousel-btn carousel-prev">&#8249;</button>
+          <button class="carousel-btn carousel-next">&#8250;</button>
+          <div class="img-dots">
+            <span class="img-dot active"></span><span class="img-dot"></span>
+          </div>
+        </div>
+      </div>
+      <div class="txt-col">
+        <div class="avail-row"><div class="avail-dot dm"></div>Available in May - Reserve Now</div>
+        <div class="sub">
+          <div class="iname">Queen Bed Set - <span class="iprice-inline">$120</span></div>
+          <ul class="imeta">
+            <li><b>Includes -</b> Queen mattress + 2 pillows</li>
+          </ul>
+        </div>
+        <div class="icontact">Contact - <a href="mailto:amulyavw@umich.edu">Amulya</a> · <a href="tel:+17342395932">734-239-5932</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 34 - Study Chair (Amulya's) -->
+  <div class="item" data-av="may">
+    <div class="item-grid">
+      <div class="img-col" data-hover="Grind Harder">
+        <div class="img-box"><img loading="lazy" src="Images/Studychair_01.jpeg" alt="Study Chair" style="object-fit:contain; background:rgba(46,78,210,.05);"/></div>
+      </div>
+      <div class="txt-col">
+        <div class="avail-row"><div class="avail-dot dm"></div>Available in May - Reserve Now</div>
+        <div class="sub">
+          <div class="iname">Study Chair - <span class="iprice-inline">$25</span></div>
+        </div>
+        <div class="icontact">Contact - <a href="mailto:amulyavw@umich.edu">Amulya</a> · <a href="tel:+17342395932">734-239-5932</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 35 - Study Table Set -->
+  <div class="item" data-av="may">
+    <div class="item-grid flip">
+      <div class="img-col" data-hover="Desk Goals">
+        <div class="img-carousel">
+          <div class="img-box active"><img loading="lazy" src="Images/Studytableset_0.jpeg" alt="Study Table"/></div>
+          <div class="img-box"><img loading="lazy" src="Images/Studytable set _01.jpeg" alt="Study Table"/></div>
+          <button class="carousel-btn carousel-prev">&#8249;</button>
+          <button class="carousel-btn carousel-next">&#8250;</button>
+          <div class="img-dots">
+            <span class="img-dot active"></span><span class="img-dot"></span>
+          </div>
+        </div>
+      </div>
+      <div class="txt-col">
+        <div class="avail-row"><div class="avail-dot dm"></div>Available in May - Reserve Now</div>
+        <div class="sub">
+          <div class="iname">Study Table - <span class="iprice-inline">$25</span></div>
+        </div>
+        <div class="icontact">Contact - <a href="mailto:amulyavw@umich.edu">Amulya</a> · <a href="tel:+17342395932">734-239-5932</a></div>
+      </div>
+    </div>
+  </div>
+
 </section>
 
 
@@ -1509,13 +1721,14 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
         <span class="pill">Cash</span>
         <span class="pill">Zelle</span>
         <span class="pill">PayPal</span>
+        <span class="pill">Venmo</span>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <span>BYEBYE - DESIGNED BY HUMANS, CODED BY CLAUDE CODE</span>
+  <span>BYEBYE - DESIGNED BY HUMANS, CODED BY CLAUDE</span>
 </footer>
 </div>
 <div class="footer-spacer"></div>
