@@ -532,15 +532,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 .footer-spacer {
   display: block;
 }
-#all-items::after {
-  content: '';
-  display: block;
-  height: 20px;
-  margin-top: -20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.15);
-  position: relative;
-  z-index: 3;
-}
+
 
 /* Circular progress */
 .progress-circle {
@@ -932,10 +924,10 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
       <div class="ftab-pill" id="ftabPill"></div>
       <div class="ftabs">
         <button class="ftab on" onclick="filter('all',this)">All (<span class="ftab-count">43</span>)</button>
-        <button class="ftab"    onclick="filter('now',this)">Available Now (<span class="ftab-count">21</span>)</button>
-        <button class="ftab"    onclick="filter('may',this)">Available in May (<span class="ftab-count">17</span>)</button>
-        <button class="ftab"    onclick="filter('sold',this)">Sold (<span class="ftab-count">1</span>)</button>
-        <button class="ftab"    onclick="filter('reserved',this)">Reserved (<span class="ftab-count">4</span>)</button>
+        <button class="ftab"    onclick="filter('now',this)">Available Now (<span class="ftab-count">20</span>)</button>
+        <button class="ftab"    onclick="filter('may',this)">Available in May (<span class="ftab-count">16</span>)</button>
+        <button class="ftab"    onclick="filter('sold',this)">Sold (<span class="ftab-count">2</span>)</button>
+        <button class="ftab"    onclick="filter('reserved',this)">Reserved (<span class="ftab-count">5</span>)</button>
       </div>
     </div>
   </div>
@@ -1597,13 +1589,13 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
   </div>
 
   <!-- 30 - HP Monitor -->
-  <div class="item" data-av="now">
+  <div class="item" data-av="sold">
     <div class="item-grid flip">
       <div class="img-col" data-hover="Screen Time">
         <div class="img-box"><img loading="lazy" src="Images/Monitor.jpeg" alt="HP Monitor"/></div>
       </div>
       <div class="txt-col">
-        <div class="avail-row"><div class="avail-dot dn"></div>Available Now</div>
+        <div class="avail-row"><div class="avail-dot dn"></div>Sold</div>
         <div class="sub">
           <div class="iname">HP Monitor - <span class="iprice-inline">$10</span></div>
           <ul class="imeta">
@@ -1810,13 +1802,13 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
   </div>
 
   <!-- 39 - Accent Chair -->
-  <div class="item" data-av="may">
+  <div class="item" data-av="reserved">
     <div class="item-grid flip">
       <div class="img-col" data-hover="Sit Pretty">
         <div class="img-box"><img loading="lazy" src="Images/Chair.jpeg" alt="Accent Chair"/></div>
       </div>
       <div class="txt-col">
-        <div class="avail-row"><div class="avail-dot dm"></div>Available in May - Reserve Now</div>
+        <div class="avail-row"><div class="avail-dot dm"></div>Reserved</div>
         <div class="sub">
           <div class="iname">Accent Chair - <span class="iprice-inline">$25</span></div>
           <ul class="imeta">
@@ -1966,6 +1958,20 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
 </section>
 
+
+
+<!-- HOME VISIT CTA -->
+<section class="home-visit-section" style="background:var(--blue); padding:6rem var(--gap); text-align:center; position:relative; z-index:2;">
+  <p class="eyebrow eyebrow-lg" style="color:var(--off); opacity:.6; margin-bottom:1.5rem;">YES, WE MEAN IT</p>
+  <h2 style="font-family:'beastly',sans-serif; font-weight:700; font-size:clamp(2.5rem,6vw,5rem); color:var(--off); line-height:1; margin-bottom:2rem;">Come over.<br/>Seriously.</h2>
+  <p style="font-family:'EB Garamond',serif; font-size:clamp(1.1rem,2vw,1.4rem); color:var(--off); max-width:600px; margin:0 auto 1rem; line-height:1.6; opacity:.85;">
+    We don't just do front-door handoffs. You're welcome to walk in, poke around, judge our decor, and claim whatever catches your eye. Think of it as a museum tour, except everything's for sale and way cheaper.
+  </p>
+  <p style="font-family:'EB Garamond',serif; font-size:clamp(1.1rem,2vw,1.4rem); color:var(--off); max-width:600px; margin:0 auto 2.5rem; line-height:1.6; opacity:.85;">
+    Just drop us a text with when you'd like to visit. We'd love to welcome you into our little home.
+  </p>
+  <a href="#reach-out" style="display:inline-block; background:var(--off); color:var(--blue); font-family:'Helvetica Neue',sans-serif; font-size:1rem; font-weight:600; text-transform:uppercase; letter-spacing:.1em; padding:1rem 2.5rem; text-decoration:none; border-radius:0; transition:opacity .2s;">Schedule a Visit</a>
+</section>
 
 <!-- REACH OUT -->
 <div class="footer-reveal-wrapper">
