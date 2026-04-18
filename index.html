@@ -818,7 +818,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
     <circle class="progress-bg" cx="30" cy="30" r="26"/>
     <circle class="progress-fill" cx="30" cy="30" r="26" id="progressFill"/>
   </svg>
-  <span class="progress-text" id="progressText">0/43</span>
+  <span class="progress-text" id="progressText">0/42</span>
 </div>
 
 <!-- NAV -->
@@ -923,11 +923,11 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
     <div class="ftabs-wrap">
       <div class="ftab-pill" id="ftabPill"></div>
       <div class="ftabs">
-        <button class="ftab on" onclick="filter('all',this)">All (<span class="ftab-count">43</span>)</button>
-        <button class="ftab"    onclick="filter('now',this)">Available Now (<span class="ftab-count">19</span>)</button>
-        <button class="ftab"    onclick="filter('may',this)">Available in May (<span class="ftab-count">16</span>)</button>
-        <button class="ftab"    onclick="filter('sold',this)">Sold (<span class="ftab-count">3</span>)</button>
-        <button class="ftab"    onclick="filter('reserved',this)">Reserved (<span class="ftab-count">5</span>)</button>
+        <button class="ftab"    onclick="filter('now',this)">Available Now (<span class="ftab-count">11</span>)</button>
+        <button class="ftab on" onclick="filter('all',this)">All (<span class="ftab-count">42</span>)</button>
+        <button class="ftab"    onclick="filter('may',this)">Available in May (<span class="ftab-count">14</span>)</button>
+        <button class="ftab"    onclick="filter('sold',this)">Sold (<span class="ftab-count">7</span>)</button>
+        <button class="ftab"    onclick="filter('reserved',this)">Reserved (<span class="ftab-count">10</span>)</button>
       </div>
     </div>
   </div>
@@ -982,13 +982,13 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
   </div>
 
   <!-- 2 - Books -->
-  <div class="item" data-av="now">
+  <div class="item" data-av="sold">
     <div class="item-grid">
       <div class="img-col" data-hover="Story Time">
         <div class="img-box"><img loading="lazy" src="Images/Comics.jpeg" alt="Kids Book Bundle"/></div>
       </div>
       <div class="txt-col">
-        <div class="avail-row"><div class="avail-dot dn"></div>Available Now</div>
+        <div class="avail-row"><div class="avail-dot dn"></div>Sold</div>
         <div class="sub">
           <div class="iname">Comics Bundle - <span class="iprice-inline">$12</span></div>
           <ul class="imeta">
@@ -1027,13 +1027,13 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
   </div>
 
   <!-- 7 - Rocket LED Lamp -->
-  <div class="item" data-av="now">
+  <div class="item" data-av="reserved">
     <div class="item-grid">
       <div class="img-col" data-hover="Blast Off">
         <div class="img-box"><img loading="lazy" src="Images/Rocket.jpg" alt="Rocket LED Lamp"/></div>
       </div>
       <div class="txt-col">
-        <div class="avail-row"><div class="avail-dot dn"></div>Available Now</div>
+        <div class="avail-row"><div class="avail-dot dn"></div>Reserved</div>
         <div class="sub">
           <div class="iname">Rocket LED Lamp - <span class="iprice-inline">$18</span></div>
           <ul class="imeta">
@@ -1076,13 +1076,13 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
   </div>
 
   <!-- 9 - Floor Rug -->
-  <div class="item" data-av="now">
+  <div class="item" data-av="reserved">
     <div class="item-grid">
       <div class="img-col" data-hover="Soft Steps">
         <div class="img-box"><img loading="lazy" src="Images/Rug1.jpg" alt="Floor Rug"/></div>
       </div>
       <div class="txt-col">
-        <div class="avail-row"><div class="avail-dot dn"></div>Available Now</div>
+        <div class="avail-row"><div class="avail-dot dn"></div>Reserved</div>
         <div class="sub">
           <div class="iname">Floor Rug - <span class="iprice-inline">$7</span></div>
           <ul class="imeta">
@@ -1094,37 +1094,9 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
     </div>
   </div>
 
-  <!-- 10 - Chair & Throw Blanket -->
-  <div class="item" data-av="now">
-    <div class="item-grid flip">
-      <div class="img-col" data-hover="Stay Seated · Michigan Winter Approved">
-        <div class="img-box"><img loading="lazy" src="Images/studychair1.jpg" alt="Chair & Throw Blanket"/></div>
-      </div>
-      <div class="txt-col">
-        <div class="avail-row"><div class="avail-dot dn"></div>Available Now</div>
-        <div class="sub">
-          <div class="iname">Chair - <span class="iprice-inline">$25</span></div>
-          <ul class="imeta">
-            <li><b>Includes -</b> Pillow for support</li>
-            <li><b>Color -</b> Black</li>
-            <li><b>Material -</b> Leather</li>
-            <li><b>Note -</b> Chair available in May</li>
-          </ul>
-        </div>
-        <div class="sub">
-          <div class="iname">Throw Blanket - <span class="iprice-inline">$9</span></div>
-          <ul class="imeta">
-            <li><b>Color -</b> Forest Green</li>
-          </ul>
-        </div>
-        <div class="icontact">Contact - <a href="mailto:shruthy@umich.edu">Shruthi</a> · <a href="tel:+17343305974">734-330-5974</a></div>
-      </div>
-    </div>
-  </div>
-
   <!-- 11 - Standing Lamps -->
   <div class="item" data-av="now">
-    <div class="item-grid">
+    <div class="item-grid flip">
       <div class="img-col" data-hover="Light Up">
         <div class="img-carousel">
           <div class="img-box active"><img loading="lazy" src="Images/standinglamp0.jpeg" alt="Standing Lamps"/></div>
@@ -1152,7 +1124,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 11b - Earth Plushy -->
   <div class="item" data-av="now">
-    <div class="item-grid flip">
+    <div class="item-grid">
       <div class="img-col" data-hover="Soft Landing">
         <div class="img-carousel">
           <div class="img-box active"><img loading="lazy" src="Images/Earth1.jpeg" alt="Earth Plushy"/></div>
@@ -1179,13 +1151,13 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
   </div>
 
   <!-- 12 - Storage Boxes -->
-  <div class="item" data-av="may">
-    <div class="item-grid">
+  <div class="item" data-av="reserved">
+    <div class="item-grid flip">
       <div class="img-col" data-hover="Stay Tidy">
         <div class="img-box"><img loading="lazy" src="Images/Storagebox.jpeg" alt="Storage Boxes"/></div>
       </div>
       <div class="txt-col">
-        <div class="avail-row"><div class="avail-dot dm"></div>Available in May - Reserve Now</div>
+        <div class="avail-row"><div class="avail-dot dm"></div>Reserved</div>
         <div class="sub">
           <div class="iname">Storage Boxes - <span class="iprice-inline">$7</span></div>
           <ul class="imeta">
@@ -1202,7 +1174,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 13 - Clothing Rack -->
   <div class="item" data-av="may">
-    <div class="item-grid flip">
+    <div class="item-grid">
       <div class="img-col" data-hover="Hang On">
         <div class="img-box"><img loading="lazy" src="Images/Stand for hangers.jpeg" alt="Clothing Rack"/></div>
       </div>
@@ -1223,7 +1195,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 14 - Yoga Mat -->
   <div class="item" data-av="reserved">
-    <div class="item-grid">
+    <div class="item-grid flip">
       <div class="img-col" data-hover="Barely Stretched">
         <div class="img-carousel">
           <div class="img-box active"><img loading="lazy" src="Images/Yoga2.jpeg" alt="Yoga Mat"/></div>
@@ -1252,7 +1224,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 16 - Queen Bed Set -->
   <div class="item" data-av="may">
-    <div class="item-grid flip">
+    <div class="item-grid">
       <div class="img-col" data-hover="Sleep like a puppy">
         <div class="img-carousel">
           <div class="img-box active"><img loading="lazy" src="Images/QB1.jpeg" alt="Queen Bed Set"/></div>
@@ -1288,7 +1260,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 17 - Hair Dryer -->
   <div class="item" data-av="may">
-    <div class="item-grid">
+    <div class="item-grid flip">
       <div class="img-col" data-hover="Good Hair">
         <div class="img-box"><img loading="lazy" src="Images/hairdryer.jpg" alt="Hair Dryer" style="object-position:center center;"/></div>
       </div>
@@ -1309,7 +1281,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 18 - Iron Box -->
   <div class="item" data-av="reserved">
-    <div class="item-grid flip">
+    <div class="item-grid">
       <div class="img-col" data-hover="Press On">
         <div class="img-box"><img loading="lazy" src="Images/Ironbox.jpg" alt="Iron Box"/></div>
       </div>
@@ -1329,7 +1301,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 19 - Columbia Shoes -->
   <div class="item" data-av="now">
-    <div class="item-grid">
+    <div class="item-grid flip">
       <div class="img-col" data-hover="Snow Ready">
         <div class="img-carousel">
           <div class="img-box active"><img loading="lazy" src="Images/shoes0.jpeg" alt="Columbia Shoes"/></div>
@@ -1361,7 +1333,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 20 - DKNY Puffer Jacket -->
   <div class="item" data-av="now">
-    <div class="item-grid flip">
+    <div class="item-grid">
       <div class="img-col" data-hover="Stay Puffy">
         <div class="img-carousel">
           <div class="img-box active"><img loading="lazy" src="Images/dkny0.jpeg" alt="DKNY Puffer Jacket"/></div>
@@ -1390,7 +1362,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 21 - Hollister Jacket -->
   <div class="item" data-av="now">
-    <div class="item-grid">
+    <div class="item-grid flip">
       <div class="img-col" data-hover="Layer Up">
         <div class="img-box"><img loading="lazy" src="Images/jacket1.jpeg" alt="Hollister Jacket"/></div>
       </div>
@@ -1410,8 +1382,8 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
   </div>
 
   <!-- 22 - Lamp -->
-  <div class="item" data-av="now">
-    <div class="item-grid flip">
+  <div class="item" data-av="sold">
+    <div class="item-grid">
       <div class="img-col" data-hover="Mood Setter">
         <div class="img-carousel">
           <div class="img-box active"><img loading="lazy" src="Images/Lamp0.jpeg" alt="Lamp" style="object-fit:contain; background:rgba(46,78,210,.05);"/></div>
@@ -1424,7 +1396,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
         </div>
       </div>
       <div class="txt-col">
-        <div class="avail-row"><div class="avail-dot dn"></div>Available Now</div>
+        <div class="avail-row"><div class="avail-dot dn"></div>Sold</div>
         <div class="sub">
           <div class="iname">Lamp - <span class="iprice-inline">$18</span></div>
           <ul class="imeta">
@@ -1439,7 +1411,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 23 - Pumpkin Plush -->
   <div class="item" data-av="now">
-    <div class="item-grid">
+    <div class="item-grid flip">
       <div class="img-col" data-hover="Spooky Cute">
         <div class="img-box"><img loading="lazy" src="Images/Pumpkin.jpeg" alt="Pumpkin Plush"/></div>
       </div>
@@ -1458,7 +1430,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 24 - TP-Link Router -->
   <div class="item" data-av="may">
-    <div class="item-grid flip">
+    <div class="item-grid">
       <div class="img-col" data-hover="Stay Connected">
         <div class="img-box"><img loading="lazy" src="Images/Router.JPG" alt="TP-Link Router"/></div>
       </div>
@@ -1479,7 +1451,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 25 - Study Table -->
   <div class="item" data-av="may">
-    <div class="item-grid">
+    <div class="item-grid flip">
       <div class="img-col" data-hover="Grind Mode">
         <div class="img-box"><img loading="lazy" src="Images/studytable.jpg" alt="Study Table" style="object-position:bottom center;"/></div>
       </div>
@@ -1506,8 +1478,8 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
   </div>
 
   <!-- 26 - Twin Bedsheet Set -->
-  <div class="item" data-av="now">
-    <div class="item-grid flip">
+  <div class="item" data-av="sold">
+    <div class="item-grid">
       <div class="img-col" data-hover="Sweet Dreams">
         <div class="img-carousel">
           <div class="img-box active"><img loading="lazy" src="Images/TB0.jpeg" alt="Twin Bedsheet Set"/></div>
@@ -1521,7 +1493,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
         </div>
       </div>
       <div class="txt-col">
-        <div class="avail-row"><div class="avail-dot dn"></div>Available Now</div>
+        <div class="avail-row"><div class="avail-dot dn"></div>Sold</div>
         <div class="sub">
           <div class="iname">Twin Bedsheet Set - <span class="iprice-inline">$7</span></div>
           <ul class="imeta">
@@ -1536,7 +1508,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 27 - Brita Water Filter -->
   <div class="item" data-av="sold">
-    <div class="item-grid">
+    <div class="item-grid flip">
       <div class="img-col" data-hover="Stay Hydrated">
         <div class="img-box"><img loading="lazy" src="Images/Brita0.jpeg" alt="Brita Water Filter" style="object-fit:contain; background:rgba(46,78,210,.05);"/></div>
       </div>
@@ -1552,7 +1524,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 28 - Lounge Chairs -->
   <div class="item" data-av="reserved">
-    <div class="item-grid flip">
+    <div class="item-grid">
       <div class="img-col" data-hover="Chill Mode">
         <div class="img-box"><img loading="lazy" src="Images/Chairs_relax.jpeg" alt="Lounge Chairs"/></div>
       </div>
@@ -1571,7 +1543,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 29 - Iron Tawa -->
   <div class="item" data-av="now">
-    <div class="item-grid">
+    <div class="item-grid flip">
       <div class="img-col" data-hover="Sizzle Time">
         <div class="img-box"><img loading="lazy" src="Images/Iron_tawa0.jpeg" alt="Iron Tawa"/></div>
       </div>
@@ -1590,7 +1562,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 30 - HP Monitor -->
   <div class="item" data-av="sold">
-    <div class="item-grid flip">
+    <div class="item-grid">
       <div class="img-col" data-hover="Screen Time">
         <div class="img-box"><img loading="lazy" src="Images/Monitor.jpeg" alt="HP Monitor"/></div>
       </div>
@@ -1609,7 +1581,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 31 - Oven Trays -->
   <div class="item" data-av="now">
-    <div class="item-grid">
+    <div class="item-grid flip">
       <div class="img-col" data-hover="Bake It">
         <div class="img-carousel">
           <div class="img-box active"><img loading="lazy" src="Images/Oven_tray0.jpeg" alt="Oven Trays"/></div>
@@ -1633,7 +1605,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 32 - Ceramic Decor Pot -->
   <div class="item" data-av="now">
-    <div class="item-grid flip">
+    <div class="item-grid">
       <div class="img-col" data-hover="Pretty Storage">
         <div class="img-carousel">
           <div class="img-box active"><img loading="lazy" src="Images/Pot.jpeg" alt="Ceramic Decor Pot" style="object-fit:contain; background:rgba(46,78,210,.05);"/></div>
@@ -1658,7 +1630,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 33 - Queen Bed Set (Amulya's) -->
   <div class="item" data-av="may">
-    <div class="item-grid">
+    <div class="item-grid flip">
       <div class="img-col" data-hover="Cloud Nine">
         <div class="img-carousel">
           <div class="img-box active"><img loading="lazy" src="Images/Queenbedset_Amulya_0.jpeg" alt="Queen Bed Set"/></div>
@@ -1685,7 +1657,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 34 - Study Chair (Amulya's) -->
   <div class="item" data-av="may">
-    <div class="item-grid flip">
+    <div class="item-grid">
       <div class="img-col" data-hover="Grind Harder">
         <div class="img-box"><img loading="lazy" src="Images/Studychair_01.jpeg" alt="Study Chair" style="object-fit:contain; background:rgba(46,78,210,.05);"/></div>
       </div>
@@ -1701,7 +1673,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 35 - Study Table Set -->
   <div class="item" data-av="may">
-    <div class="item-grid">
+    <div class="item-grid flip">
       <div class="img-col" data-hover="Desk Goals">
         <div class="img-carousel">
           <div class="img-box active"><img loading="lazy" src="Images/Studytableset_0.jpeg" alt="Study Table"/></div>
@@ -1724,8 +1696,8 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
   </div>
 
   <!-- 36 - Comforter Set -->
-  <div class="item" data-av="now">
-    <div class="item-grid flip">
+  <div class="item" data-av="sold">
+    <div class="item-grid">
       <div class="img-col" data-hover="Cozy Up">
         <div class="img-carousel">
           <div class="img-box active"><img loading="lazy" src="Images/Comforter0.jpeg" alt="Comforter Set"/></div>
@@ -1738,7 +1710,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
         </div>
       </div>
       <div class="txt-col">
-        <div class="avail-row"><div class="avail-dot dn"></div>Available Now</div>
+        <div class="avail-row"><div class="avail-dot dn"></div>Sold</div>
         <div class="sub">
           <div class="iname">Comforter Set - <span class="iprice-inline">$15</span></div>
           <ul class="imeta">
@@ -1753,8 +1725,8 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
   </div>
 
   <!-- 37 - Office Chair -->
-  <div class="item" data-av="now">
-    <div class="item-grid">
+  <div class="item" data-av="reserved">
+    <div class="item-grid flip">
       <div class="img-col" data-hover="Boss Mode">
         <div class="img-carousel">
           <div class="img-box active"><img loading="lazy" src="Images/StudyChair0.jpeg" alt="Office Chair"/></div>
@@ -1767,7 +1739,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
         </div>
       </div>
       <div class="txt-col">
-        <div class="avail-row"><div class="avail-dot dn"></div>Available Now</div>
+        <div class="avail-row"><div class="avail-dot dn"></div>Reserved</div>
         <div class="sub">
           <div class="iname">Office Chair - <span class="iprice-inline">$25</span></div>
           <ul class="imeta">
@@ -1783,7 +1755,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 38 - Air Fryer -->
   <div class="item" data-av="may">
-    <div class="item-grid flip">
+    <div class="item-grid">
       <div class="img-col" data-hover="Crispy Bites">
         <div class="img-box"><img loading="lazy" src="Images/Airfyer.jpeg" alt="Philips Air Fryer"/></div>
       </div>
@@ -1803,7 +1775,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 39 - Accent Chair -->
   <div class="item" data-av="reserved">
-    <div class="item-grid">
+    <div class="item-grid flip">
       <div class="img-col" data-hover="Sit Pretty">
         <div class="img-box"><img loading="lazy" src="Images/Chair.jpeg" alt="Accent Chair"/></div>
       </div>
@@ -1822,13 +1794,13 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
   </div>
 
   <!-- 40 - Microwave -->
-  <div class="item" data-av="may">
-    <div class="item-grid flip">
+  <div class="item" data-av="reserved">
+    <div class="item-grid">
       <div class="img-col" data-hover="Heat It Up">
         <div class="img-box"><img loading="lazy" src="Images/Microwave.jpeg" alt="Samsung Microwave"/></div>
       </div>
       <div class="txt-col">
-        <div class="avail-row"><div class="avail-dot dm"></div>Available in May - Reserve Now</div>
+        <div class="avail-row"><div class="avail-dot dm"></div>Reserved</div>
         <div class="sub">
           <div class="iname">Samsung Microwave - <span class="iprice-inline">$50</span></div>
           <ul class="imeta">
@@ -1843,7 +1815,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 41 - Twin Bed Set -->
   <div class="item" data-av="may">
-    <div class="item-grid">
+    <div class="item-grid flip">
       <div class="img-col" data-hover="Sweet Dreams">
         <div class="img-carousel">
           <div class="img-box active"><img loading="lazy" src="Images/TwinBed.jpeg" alt="Twin Bed"/></div>
@@ -1872,7 +1844,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 42 - Fleece Blanket (Taupe) -->
   <div class="item" data-av="may">
-    <div class="item-grid flip">
+    <div class="item-grid">
       <div class="img-col" data-hover="Snuggle Up">
         <div class="img-box"><img loading="lazy" src="Images/Blanket0.png" alt="Taupe Fleece Blanket"/></div>
       </div>
@@ -1892,7 +1864,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 43 - Fleece Blanket (Blue) -->
   <div class="item" data-av="may">
-    <div class="item-grid">
+    <div class="item-grid flip">
       <div class="img-col" data-hover="Warm & Fuzzy">
         <div class="img-box"><img loading="lazy" src="Images/AnotherBlanket.jpeg" alt="Blue Fleece Blanket"/></div>
       </div>
@@ -1912,7 +1884,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 44 - Storage Box with Lid -->
   <div class="item" data-av="may">
-    <div class="item-grid flip">
+    <div class="item-grid">
       <div class="img-col" data-hover="Pack It Up">
         <div class="img-box"><img loading="lazy" src="Images/Storage0.jpeg" alt="Storage Box with Lid"/></div>
       </div>
@@ -1931,7 +1903,7 @@ footer { background:var(--off); padding:1.75rem var(--gap); display:flex; align-
 
   <!-- 45 - Crate Storage -->
   <div class="item" data-av="may">
-    <div class="item-grid">
+    <div class="item-grid flip">
       <div class="img-col" data-hover="Stack Away">
         <div class="img-carousel">
           <div class="img-box active"><img loading="lazy" src="Images/Storage1.jpeg" alt="Crate Storage"/></div>
